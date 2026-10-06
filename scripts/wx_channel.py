@@ -201,7 +201,7 @@ class WxChannelClient:
         version = str(data.get("version", ""))
         if version and _version_tuple(version) < (5, 6, 8):
             raise WxChannelError(
-                f"当前 wx_channel {version} 不支持 sph 分享短链，请使用项目内置的 5.6.8 源码版"
+                f"当前 wx_channel {version} 不支持 sph 分享短链，请从上游获取支持该接口的版本"
             )
         return data
 
@@ -276,7 +276,7 @@ class WxChannelClient:
         except WxChannelError as exc:
             if "404" in str(exc) or "not found" in str(exc).lower():
                 raise WxChannelError(
-                    "当前 wx_channel 不支持 sph 分享短链，请重启项目内置版本"
+                    "当前 wx_channel 不支持 sph 分享短链，请检查上游版本与本项目接口是否兼容"
                 ) from exc
             raise
 
