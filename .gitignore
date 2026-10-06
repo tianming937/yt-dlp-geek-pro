@@ -1,0 +1,47 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+.venv/
+venv/
+.env
+.env.*
+
+# User configuration and downloaded content
+/config/config.json
+/config/*.local.json
+/downloads/*
+!/downloads/.gitkeep
+/tools/ffmpeg/*
+!/tools/ffmpeg/.gitkeep
+/tools/wx_channel/*
+!/tools/wx_channel/.gitkeep
+
+# Local notes and generated files
+/docs/
+/(2
+*.log
+*.tmp
+*.db
+*.db-shm
+*.db-wal
+*.exe
+*.mp4
+*.mkv
+*.webm
+*.mp3
+*.m4a
+*.part
+*.ytdl
+*.pem
+*.cer
+*.crt
+*cookies*.txt
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

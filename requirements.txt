@@ -1,0 +1,5 @@
+# Tested on Python 3.11. Install FFmpeg separately for merging and audio extraction.
+yt-dlp>=2026.6.9,<2027.0.0
+requests>=2.32.3,<3
+chardet>=3.0.2,<6
+customtkinter>=5.2.0,<7

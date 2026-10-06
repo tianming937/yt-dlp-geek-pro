@@ -1,0 +1,5 @@
+# 此目录用于存储 FFmpeg 二进制文件
+# This directory is used to store FFmpeg binaries
+#
+# 运行 download_ffmpeg.bat (Windows) 自动下载
+# Run download_ffmpeg.bat (Windows) to download automatically

@@ -1,0 +1,19 @@
+{
+  "format": "bestvideo+bestaudio/best",
+  "output_template": "%(title)s [%(id)s].%(ext)s",
+  "playlist_output_template": "%(playlist)s/%(playlist_index)s - %(title)s [%(id)s].%(ext)s",
+  "download_path": "./downloads",
+  "embed_subtitles": false,
+  "subtitle_langs": ["zh-CN", "zh-Hans", "zh-Hant", "en"],
+  "merge_output_format": "mp4",
+  "playlist_options": {"create_folder": true},
+  "proxy": "",
+  "cookies_file": "",
+  "rate_limit": "",
+  "wx_channel_exe": "./tools/wx_channel/wx_channel.exe",
+  "wx_channel_api_url": "http://127.0.0.1:2025",
+  "wx_channel_download_path": "./downloads",
+  "wx_channel_startup_timeout": 120,
+  "wx_channel_download_timeout": 1800,
+  "wx_channel_poll_interval": 1
+}
