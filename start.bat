@@ -11,18 +11,21 @@ echo.
 REM 检查 Python 是否安装
 python --version > nul 2>&1
 if errorlevel 1 (
-    echo [错误] 未检测到 Python，请先安装 Python 3.8+
+    echo [错误] 未检测到 Python，请先安装 Python 3.11+
     echo 下载地址: https://www.python.org/downloads/
     pause
     exit /b 1
 )
 
 echo [信息] 检测到 Python 环境
+for /f "tokens=2" %%i in ('python --version 2^>^&1') do set PYTHON_VERSION=%%i
+echo [信息] Python 版本: %PYTHON_VERSION%
 echo.
 
-python -c "import sys; sys.exit(sys.version_info < (3, 11))" > nul 2>&1
+python -c "import sys, operator; sys.exit(not operator.ge(sys.version_info[:2], (3, 11)))" > nul 2>&1
 if errorlevel 1 (
     echo [错误] 需要 Python 3.11 或更高版本
+    echo [当前版本] %PYTHON_VERSION%
     pause
     exit /b 1
 )
